@@ -1,7 +1,7 @@
 package com.cyxtera.technicaltest.exception;
 
-public class InvalidOperationException extends Exception {
-    public InvalidOperationException(String s) {
-        super(s);
+public class InvalidOperationException extends CyxteraException {
+    public InvalidOperationException(String message) {
+        super(message, 400);
     }
 }

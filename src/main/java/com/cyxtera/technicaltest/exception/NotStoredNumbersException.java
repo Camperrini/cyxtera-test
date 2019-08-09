@@ -1,7 +1,7 @@
 package com.cyxtera.technicaltest.exception;
 
-public class NotStoredNumbersException extends Exception {
-    public NotStoredNumbersException(String s) {
-        super(s);
+public class NotStoredNumbersException extends CyxteraException {
+    public NotStoredNumbersException(String message) {
+        super(message, 400);
     }
 }

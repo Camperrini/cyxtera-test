@@ -6,9 +6,11 @@ import com.cyxtera.technicaltest.exception.SessionNotFoundException;
 import com.cyxtera.technicaltest.model.Session;
 import com.cyxtera.technicaltest.repository.redis.SessionRepository;
 import com.cyxtera.technicaltest.service.OperationsService;
+import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 
+@Service
 public class OperationsServiceImpl implements OperationsService {
 
     private final SessionRepository sessionRepository;
@@ -68,6 +70,8 @@ public class OperationsServiceImpl implements OperationsService {
                     result = Math.pow(result, number);
                 }
                 break;
+            default:
+                throw new InvalidOperationException("Invalid operation");
         }
         return result;
     }
